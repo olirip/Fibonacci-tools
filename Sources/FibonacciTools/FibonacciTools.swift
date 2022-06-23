@@ -1,9 +1,8 @@
 public struct FibonacciTools {
   var fibSeq: [Int:Int] = [1:1,2:1]
   
-  public init() {
-    
-  }
+  public init() { }
+  
   public mutating func reduceIndex(_ index: Int) -> Int{
     return min(index, 92)
   }
