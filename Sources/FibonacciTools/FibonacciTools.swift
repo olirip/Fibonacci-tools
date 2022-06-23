@@ -1,9 +1,14 @@
 public struct FibonacciTools {
-    public private(set) var fibSeq: [Int:Int] = [1:1,2:1]
-
-
+  var fibSeq: [Int:Int] = [1:1,2:1]
+  
+  public init() {
+    
+  }
+  public mutating func reduceIndex(_ index: Int) -> Int{
+    return min(index, 92)
+  }
   public mutating func sequenceFromTheStart(_ index: Int) -> Int? {
-    let n = min(index, 93)
+    let n = reduceIndex(index)
 
     for i in 1...n {
       buildSequence(i)
